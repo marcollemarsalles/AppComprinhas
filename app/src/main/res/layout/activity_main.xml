@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#990E2F"
+        android:drawableRight="@drawable/ic_carrinho_24"
+        android:gravity="center_vertical"
+        android:paddingEnd="140dp"
+        android:text="Comprinhas"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewBannerPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="#990E2F"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/logo_principal" />
+
+    <ImageView
+        android:id="@+id/imageViewBannerSecundario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBannerPrincipal"
+        app:srcCompat="@drawable/logo_secundaria2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItens"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:paddingRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBannerSecundario"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="2dp"
+        tools:listitem="@layout/item_lista">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_total_24"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingStart="140dp"
+        android:text=" R$ 00,00"
+        android:textColor="#990E2F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvItens" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
